@@ -136,12 +136,32 @@
 //     return 0;
 // }
 
+// #include<stdio.h>
+// int main(){
+//     int product=1;
+//     for(int i=1;i<=10;i++){
+//         printf("p=%d, i=%d, ",product,i);
+//         product*=i ; //product=product*i
+//         printf("product=%d\n",product);
+// }
+// return 0;}
+
 #include<stdio.h>
 int main(){
-    int product=1;
-    for(int i=1;i<=10;i++){
-        printf("p=%d, i=%d, ",product,i);
-        product*=i ; //product=product*i
-        printf("product=%d\n",product);
+    int n;
+    printf("Enter any number: ");
+    scanf("%d",&n);
+    int prime=1;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0){
+            prime=0;
+            break;
+        }
+    }
+    if(prime){
+        printf("prime",n);}
+    else{
+        printf("not prime",n);}
+
+    return 0;
 }
-return 0;}
